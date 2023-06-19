@@ -1,0 +1,67 @@
+<%- include('partials/header'); -%>​
+
+<ul class="recipes">​
+
+  <li class="recipe">​
+    <img src="/smoothie.png" alt="smoothie recipe icon">​
+    <h4>Banana Boost</h4>​
+    <p>Banana, Vanilla ice cream, Milk</p>​
+  </li>​
+
+  <li class="recipe">​
+    <img src="/smoothie.png" alt="smoothie recipe icon">​
+    <h4>Tropical Twist</h4>​
+    <p>Peach, Pinapple, Apple juice</p>​
+  </li>​
+
+  <li class="recipe">​
+    <img src="/smoothie.png" alt="smoothie recipe icon">​
+    <h4>Protein Packer</h4>​
+    <p>Oats, Peanut butter, Milk, Banana, Blueberries</p>​
+  </li>​
+
+  <li class="recipe">​
+    <img src="/smoothie.png" alt="smoothie recipe icon">​
+    <h4>Banana Boost</h4>​
+    <p>Banana, Vanilla ice cream, Milk</p>​
+  </li>​
+
+  <li class="recipe">​
+    <img src="/smoothie.png" alt="smoothie recipe icon">​
+    <h4>Tropical Twist</h4>​
+    <p>Peach, Pinapple, Apple juice</p>​
+  </li>​
+
+  <li class="recipe">​
+    <img src="/smoothie.png" alt="smoothie recipe icon">​
+    <h4>Protein Packer</h4>​
+    <p>Oats, Peanut butter, Milk, Banana, Blueberries</p>​
+  </li>​
+
+</ul>​
+​
+<%- include('partials/footer'); -%>​
+<script>
+  const foo = async () => {
+  const res = await fetch('/read-cookies', { 
+        method: 'GET', 
+        headers: {'Content-Type': 'application/json'}
+      });
+      const data = await res.json();
+      console.log(data);
+    }
+    foo();
+
+  const foo_header = async () => {
+      const res_header = await fetch('/read-header', { 
+        method: 'GET', 
+        headers: {'Content-Type': 'application/json',
+                  'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxM2IwODI1MTI2YjRjYjhjYjA2YWViNyIsImlhdCI6MTYzMTYzODUzMCwiZXhwIjoxNjMxODk3NzMwfQ.JTnXJ7r4SmPGJtaupyzMLulhPEoQGmyuJnH0o2pujK4' 
+                }});
+      const data = await res_header.json();
+      console.log(data);
+    }
+    foo_header();    
+</script>
+
+​
